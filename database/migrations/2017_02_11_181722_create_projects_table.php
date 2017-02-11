@@ -24,8 +24,8 @@ class CreateProjectsTable extends Migration
         });
 
         Schema::table('projects', function (Blueprint $table) {
-            $table->integer('student_id')->unsigned();
-            $table->foreign('student_id')->references('id')->on('students');
+            $table->integer('ph_id')->unsigned();
+            $table->foreign('ph_id')->references('id')->on('students');
         });
     }
 
