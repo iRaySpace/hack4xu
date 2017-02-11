@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/welcome', function () {
+Route::get('/bisagunsa', function () {
     return view('welcome');
 });
+
+Route::get('/students', 'StudentController@index');
