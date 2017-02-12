@@ -8,5 +8,6 @@
 	{{ $project->head()->first()->fname }}
 	{{ $project->head()->first()->lname }}
 	<hr>
-
+	
+	
 @endforeach

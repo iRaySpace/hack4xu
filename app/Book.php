@@ -10,7 +10,7 @@ class Book extends Model
     //
    	public function owner()
    	{
-   		return $this->belongsTo('App\Student', 'id');
+   		return $this->belongsTo('App\Student', 'owner_id', 'id');
    	}
 
 }

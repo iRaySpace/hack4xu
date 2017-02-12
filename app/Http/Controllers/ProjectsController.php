@@ -27,10 +27,11 @@ class ProjectsController extends Controller
 		$project->venue = $request->input('venue');
 		$project->status = $request->input('status');
 		$project->budget_cost = $request->input('budget_cost');
+        $project->ph_id = $request->input('ph_id');
+        
+        $project->save();
 
-        $student = Student::where('id', $request->input('ph_id'))->get();
-
-        echo $student->projects();
+        return redirect('/projects');
 
     }
 }
