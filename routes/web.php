@@ -37,6 +37,7 @@ Route::get('/books/new', 'BooksController@new');
 Route::get('/books/edit/{id}', 'BooksController@edit');
 Route::put('/books/update', 'BooksController@update');
 Route::post('/books', 'BooksController@insert');
+Route::post('/books/search', 'BooksController@search');
 Route::delete('/books/{id}', 'BooksController@destroy');
 
 

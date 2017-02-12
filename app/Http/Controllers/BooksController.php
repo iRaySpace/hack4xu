@@ -26,6 +26,13 @@ class BooksController extends Controller
         return view('books.edit', ['book' => $book, 'students' => $students]);
     }
 
+    public function search(Request $request)
+    {
+        $books = Book::where('title', 'LIKE', '%' . $request->input('searchTerms') . '%')->get();
+
+        return view('books.search')->with('books', $books);
+    }
+
     public function destroy($id)
     {
         $book = Book::find($id);
