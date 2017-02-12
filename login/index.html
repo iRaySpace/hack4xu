@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>CSG - Log into the site.</title>
+      <link rel="stylesheet" href="css/style/style.css">
+</head>
+<body>
+<div class="title-card">
+  <h1>Welcome</h1>
+  <h1 style="margin-top:-140px;">to our</h1>
+  <h1 style="margin-top:-140px;color:#212121;">website</h1>
+</div>
+<div class="container">
+  <h4 style="color:#212121;font-size:20px;margin-top:-100px;text-align:center;">Hello, User!<br><span style="font-size:12px;">Click on the
+  <img src="icon-sample.png" style="border-radius:5px;" width="16"/> to login.</h4>
+  <div class="profile">
+    <button class="profile__avatar" id="toggleProfile">
+     <img src="icon-sample.png" alt="Avatar" />
+    </button>
+    <div class="profile__form">
+      <div class="profile__fields">
+        <div class="field">
+          <input type="text" id="fieldUser" class="input" required pattern=.*\S.* />
+          <label for="fieldUser" class="label">Username</label>
+        </div>
+        <div class="field">
+          <input type="password" id="fieldPassword" class="input" required pattern=.*\S.* />
+          <label for="fieldPassword" class="label">Password</label>
+        </div>
+        <div class="profile__footer">
+          <button class="btn">Login</button>
+        </div>
+      </div>
+     </div>
+  </div>
+</div>
+<h1 class="footer" style="text-align:left;">&copy; 2017 All Rights Reserved<br>Design by <a href="#">Marc Reyes</a></h1>
+    <script src="js/index.js"></script>
+</body>
+</html>
