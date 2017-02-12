@@ -18,4 +18,14 @@ class Student extends Model
     	return $this->hasMany('App\Project', 'ph_id');
     }
 
+    protected static function boot()
+    {
+    	parent::boot();
+
+    	static::deleting(function($student) {
+    		$student->projects()->delete();
+    		$student->books()->delete();
+    	});
+    }
+
 }

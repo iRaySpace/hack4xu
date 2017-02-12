@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/bisagunsa', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
@@ -21,6 +21,7 @@ Route::get('/projects', 'ProjectsController@index');
 
 Route::get('/students/new', 'StudentsController@new');
 Route::post('/students', 'StudentsController@insert');
+Route::delete('/students/{id}', 'StudentsController@destroy');
 
 Route::get('/projects/new', 'ProjectsController@new');
 Route::get('/projects/edit/{id}', 'ProjectsController@edit');
