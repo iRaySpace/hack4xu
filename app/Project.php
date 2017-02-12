@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-    public function student()
+    public function head()
    	{
-   		return $this->belongsTo('App\Student');
+   		return $this->belongsTo('App\Student', 'id');
    	}
 }
