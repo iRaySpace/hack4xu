@@ -20,13 +20,11 @@ Route::get('/books', 'BooksController@index');
 Route::get('/projects', 'ProjectsController@index');
 
 Route::get('/students/new', 'StudentsController@new');
-
 Route::post('/students', 'StudentsController@insert');
 
 Route::get('/projects/new', 'ProjectsController@new');
-
+Route::get('/projects/edit/{id}', 'ProjectsController@edit');
 Route::post('/projects', 'ProjectsController@insert');
 
 Route::get('/books/new', 'BooksController@new');
-
 Route::post('/books', 'BooksController@insert');

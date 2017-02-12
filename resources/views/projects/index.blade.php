@@ -7,7 +7,8 @@
 	Project Head:
 	{{ $project->head()->first()->fname }}
 	{{ $project->head()->first()->lname }}
+
+	<a href="{{ url('/projects/edit\/') . $project->id }}">Edit</a>
 	<hr>
-	
-	
+
 @endforeach

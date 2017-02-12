@@ -17,6 +17,14 @@ class ProjectsController extends Controller
     	return view('projects.new')->with('students', Student::all());
     }
 
+    public function edit($id)
+    {
+        $students = Student::all();
+        $project = Project::find($id);
+
+        return view('projects.edit', ['project' => $project, 'students' => $students]);
+    }
+
     public function insert(Request $request)
     {
     	
