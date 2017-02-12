@@ -24,6 +24,7 @@ Route::post('/students', 'StudentsController@insert');
 
 Route::get('/projects/new', 'ProjectsController@new');
 Route::get('/projects/edit/{id}', 'ProjectsController@edit');
+Route::put('/projects/update', 'ProjectsController@update');
 Route::post('/projects', 'ProjectsController@insert');
 
 Route::get('/books/new', 'BooksController@new');

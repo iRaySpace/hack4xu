@@ -1,6 +1,8 @@
 <form method="POST" action="/projects">
 
 	{{ csrf_field() }}
+	
+	<input type="hidden" name="_method" value="PUT">
 
 	<label for="name">Project Name:</label>
 	<input type="text" name="name" id="name" value="{{ $project->name }}" required>
@@ -34,5 +36,8 @@
 		@endforeach	
 	</select>
 
+	<input type="hidden" value="{{ $project->id }}">
+
 	<input type="submit" value="Submit">
+
 </form>

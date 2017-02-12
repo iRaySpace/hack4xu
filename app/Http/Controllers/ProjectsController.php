@@ -25,6 +25,11 @@ class ProjectsController extends Controller
         return view('projects.edit', ['project' => $project, 'students' => $students]);
     }
 
+    public function update()
+    {
+        return request->all();
+    }
+
     public function insert(Request $request)
     {
     	
