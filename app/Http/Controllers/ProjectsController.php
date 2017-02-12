@@ -25,9 +25,31 @@ class ProjectsController extends Controller
         return view('projects.edit', ['project' => $project, 'students' => $students]);
     }
 
-    public function update()
+    public function update(Request $request)
     {
-        return request->all();
+        $project = Project::where('id', $request->input('id'));
+
+        $project->update([
+            'name' => $request->input('name'),
+            'description' => $request->input('description'),
+            'venue' => $request->input('venue'),
+            'status' => $request->input('status'),
+            'budget_cost' => $request->input('budget_cost'),
+            'ph_id' => $request->input('ph_id')
+        ]);
+
+
+    }
+
+    public function destroy($id)
+    {
+        
+        $project = Project::find($id);
+
+        $project->delete();
+
+        return redirect('/projects');
+
     }
 
     public function insert(Request $request)

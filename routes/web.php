@@ -26,6 +26,11 @@ Route::get('/projects/new', 'ProjectsController@new');
 Route::get('/projects/edit/{id}', 'ProjectsController@edit');
 Route::put('/projects/update', 'ProjectsController@update');
 Route::post('/projects', 'ProjectsController@insert');
+Route::delete('/projects/{id}', 'ProjectsController@destroy');
 
 Route::get('/books/new', 'BooksController@new');
 Route::post('/books', 'BooksController@insert');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

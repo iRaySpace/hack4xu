@@ -1,4 +1,4 @@
-<form method="POST" action="/projects">
+<form method="POST" action="/projects/update">
 
 	{{ csrf_field() }}
 	
@@ -36,7 +36,7 @@
 		@endforeach	
 	</select>
 
-	<input type="hidden" value="{{ $project->id }}">
+	<input type="hidden" value="{{ $project->id }}" name="id">
 
 	<input type="submit" value="Submit">
 
