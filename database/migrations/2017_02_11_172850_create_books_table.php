@@ -18,6 +18,7 @@ class CreateBooksTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('description');
+            $table->boolean('isAvailable')->default(TRUE);
             $table->double('price');
             $table->timestamps();
         });

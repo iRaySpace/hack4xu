@@ -38,8 +38,6 @@ class StudentsController extends Controller
             'cont_number' => $request->input('contNumber')
         ]);
 
-        print_r($student);
-
         return redirect('/students');
 
     }
