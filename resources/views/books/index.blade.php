@@ -1,5 +1,12 @@
 @foreach($books as $book)
 	
+	@if($book->isAvailable)
+		The book is available!
+	@else
+		The book is not available!
+	@endif
+	<br>
+
 	Book Title:
 	{{ $book->title }}
 	<br>
@@ -7,7 +14,7 @@
 	Book Description:
 	{{ $book->description }}
 	<br>
-
+	
 	Book Price:
 	{{ $book->price }}
 	<br>

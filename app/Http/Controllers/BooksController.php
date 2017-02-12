@@ -42,6 +42,7 @@ class BooksController extends Controller
         $book->update([
             'title' => $request->input('title'),
             'description' => $request->input('description'),
+            'isAvailable' => $request->input('isAvailable'),
             'price' => $request->input('price'),
             'owner_id' => $request->input('owner_id')
         ]);

@@ -10,7 +10,6 @@
 	<input type="text" name="description" id="description" required>
 	<br>
 
-
 	<label for="price">Price:</label>
 	<input type="text" name="price" id="price" required>
 	<br>

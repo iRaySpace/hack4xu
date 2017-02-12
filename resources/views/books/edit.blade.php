@@ -11,7 +11,16 @@
 	<label for="description">Description:</label>
 	<input type="text" name="description" id="description" value="{{ $book->description }}" required>
 	<br>
-
+	
+	<label for="isAvailable">Availability:</label><br>
+	@if($book->isAvailable)
+		<input type="radio" name="isAvailable" id="isAvailable" value="1" checked>Available<br>	
+		<input type="radio" name="isAvailable" id="isAvailable" value="0">Not available
+	@else
+		<input type="radio" name="isAvailable" id="isAvailable" value="1">Available<br>
+		<input type="radio" name="isAvailable" id="isAvailable" value="0" checked>Not available
+	@endif
+	<br>
 
 	<label for="price">Price:</label>
 	<input type="text" name="price" id="price" value="{{ $book->price }}" required>

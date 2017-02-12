@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+
 Route::get('/students', 'StudentsController@index');
 Route::get('/books', 'BooksController@index');
 Route::get('/projects', 'ProjectsController@index');
@@ -37,6 +39,5 @@ Route::put('/books/update', 'BooksController@update');
 Route::post('/books', 'BooksController@insert');
 Route::delete('/books/{id}', 'BooksController@destroy');
 
-Auth::routes();
 
 Route::get('/home', 'HomeController@index');
