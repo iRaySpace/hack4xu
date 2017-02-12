@@ -20,6 +20,8 @@ Route::get('/books', 'BooksController@index');
 Route::get('/projects', 'ProjectsController@index');
 
 Route::get('/students/new', 'StudentsController@new');
+Route::get('/students/edit/{id}', 'StudentsController@edit');
+Route::put('/students/update', 'StudentsController@update');
 Route::post('/students', 'StudentsController@insert');
 Route::delete('/students/{id}', 'StudentsController@destroy');
 

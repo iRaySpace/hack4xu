@@ -22,8 +22,6 @@
 	<input type="text" name="contNumber" id="contNumber" required>
 	<br>
 
-	
-
 	<input type="submit" value="Submit">
 
 </form>

@@ -20,6 +20,30 @@ class StudentsController extends Controller
     	return view('students.new');
     }
 
+    public function edit($id)
+    {
+        return view('students.edit')->with('student', Student::find($id));
+    }
+
+    public function update(Request $request)
+    {
+        
+        $student = Student::where('id', $request->input('id'));
+
+        $student->update([
+            'fname' => $request->input('fName'),
+            'lname' => $request->input('lName'),
+            'college' => $request->input('college'),
+            'course' => $request->input('course'),
+            'cont_number' => $request->input('contNumber')
+        ]);
+
+        print_r($student);
+
+        return redirect('/students');
+
+    }
+
     public function insert(Request $request)
     {
     	$student = new Student;
