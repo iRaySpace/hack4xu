@@ -1,5 +1,24 @@
 @foreach($books as $book)
-{{$book->title}}
+	
+	Book Title:
+	{{ $book->title }}
+	<br>
+
+	Book Description:
+	{{ $book->description }}
+	<br>
+
+	Book Price:
+	{{ $book->price }}
+	<br>
+	
+	Book Owner:
+	{{ $book->owner()->first()->fname }}
+	{{ $book->owner()->first()->lname }}
+	<br>
+	
+	<hr>
+
 @endforeach
 
 
