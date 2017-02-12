@@ -36,8 +36,4 @@
 
 @endforeach
 
-<form action="/books/search" method="POST" role="search">
-	{{ csrf_field() }}
-	<input type="text" name="searchTerms">
-	<input type="submit" value="Search">
-</form>
+<a href="{{ url('/books/') }}">Go back</a>
