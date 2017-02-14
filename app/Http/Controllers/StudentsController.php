@@ -12,12 +12,13 @@ class StudentsController extends Controller
     //
     public function index()
     {
-    	return view('students.index')->with('students', Student::all());
+        return view('students.home')->with('students', Student::all());
+    	// return view('students.index')->with('students', Student::all());
     }
 
     public function new()
     {
-    	return view('students.new');
+    	return view('students.add');
     }
 
     public function edit($id)

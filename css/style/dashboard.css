@@ -1,0 +1,105 @@
+/*
+ * Base structure
+ */
+
+ @font-face {
+     font-family: "Circular-Pro-Book";
+     src: url("../fonts/lineto-circular-pro-book.eot");
+     src: url("../fonts/lineto-circular-pro-book.eot?#iefix") format("embedded-opentype"), url("../fonts/lineto-circular-pro-book.woff") format("woff"), url("../fonts/lineto-circular-pro-book.ttf") format("truetype"), url("../fonts/lineto-`circular-pro-book.svg#lineto-circular-pro-book") format("svg");
+     font-weight: normal;
+     font-style: normal;
+ }
+ @font-face {
+     font-family: "Circular-Pro-Book-Italic";
+     src: url("../fonts/lineto-circular-pro-bookItalic.eot");
+     src: url("../fonts/lineto-circular-pro-bookItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/lineto-circular-pro-bookItalic.woff") format("woff"), url("../fonts/lineto-circular-pro-bookItalic.ttf") format("truetype"), url("../fonts/lineto-`circular-pro-bookItalic.svg#lineto-circular-pro-book") format("svg");
+     font-weight: normal;
+     font-style: normal;
+ }
+ @font-face {
+     font-family: "Circular-Pro-Medium";
+     src: url("../fonts/lineto-circular-pro-medium.eot");
+     src: url("../fonts/lineto-circular-pro-medium.eot?#iefix") format("embedded-opentype"), url("../fonts/lineto-circular-pro-medium.woff") format("woff"), url("../fonts/lineto-circular-pro-medium.ttf") format("truetype"), url("../fonts/lineto-circular-pro-medium.svg#lineto-circular-pro-medium") format("svg");
+     font-weight: normal;
+     font-style: normal;
+ }
+ @font-face {
+     font-family: "Circular-Pro-Bold";
+     src: url("../fonts/lineto-circular-pro-bold.eot");
+     src: url("../fonts/lineto-circular-pro-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/lineto-circular-pro-bold.woff") format("woff"), url("../fonts/lineto-circular-pro-bold.ttf") format("truetype"), url("../fonts/lineto-circular-pro-bold.svg#lineto-circular-pro-bold") format("svg");
+     font-weight: normal;
+     font-style: normal;
+ }
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  font-family: 'Circular-Pro-Book';
+  padding-top: 50px;
+}
+
+strong {
+  font-family: 'Circular-Pro-Bold';
+}
+
+/*
+ * Typography
+ */
+
+h1 {
+  font-family: 'Circular-Pro-Bold';
+  margin-bottom: 20px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  top: 51px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  border-right: 1px solid #eee;
+}
+
+/* Sidebar navigation */
+.sidebar {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sidebar .nav {
+  margin-bottom: 20px;
+}
+
+.sidebar .nav-item {
+  width: 100%;
+}
+
+.sidebar .nav-item + .nav-item {
+  margin-left: 0;
+}
+
+.sidebar .nav-link {
+  border-radius: 0;
+}
+
+/*
+ * Dashboard
+ */
+
+ /* Placeholders */
+.placeholders {
+  padding-bottom: 3rem;
+}
+
+.placeholder img {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
