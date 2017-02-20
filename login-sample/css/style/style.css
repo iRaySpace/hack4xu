@@ -1,0 +1,230 @@
+@font-face {
+    font-family: "Circular-Pro-Book";
+    src: url("../fonts/lineto-circular-pro-book.eot");
+    src: url("../fonts/lineto-circular-pro-book.eot?#iefix") format("embedded-opentype"), url("../fonts/lineto-circular-pro-book.woff") format("woff"), url("../fonts/lineto-circular-pro-book.ttf") format("truetype"), url("../fonts/lineto-`circular-pro-book.svg#lineto-circular-pro-book") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Circular-Pro-Book-Italic";
+    src: url("../fonts/lineto-circular-pro-bookItalic.eot");
+    src: url("../fonts/lineto-circular-pro-bookItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/lineto-circular-pro-bookItalic.woff") format("woff"), url("../fonts/lineto-circular-pro-bookItalic.ttf") format("truetype"), url("../fonts/lineto-`circular-pro-bookItalic.svg#lineto-circular-pro-book") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Circular-Pro-Medium";
+    src: url("../fonts/lineto-circular-pro-medium.eot");
+    src: url("../fonts/lineto-circular-pro-medium.eot?#iefix") format("embedded-opentype"), url("../fonts/lineto-circular-pro-medium.woff") format("woff"), url("../fonts/lineto-circular-pro-medium.ttf") format("truetype"), url("../fonts/lineto-circular-pro-medium.svg#lineto-circular-pro-medium") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Circular-Pro-Bold";
+    src: url("../fonts/lineto-circular-pro-bold.eot");
+    src: url("../fonts/lineto-circular-pro-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/lineto-circular-pro-bold.woff") format("woff"), url("../fonts/lineto-circular-pro-bold.ttf") format("truetype"), url("../fonts/lineto-circular-pro-bold.svg#lineto-circular-pro-bold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Base styles */
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+  line-height: 1.5;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  margin-left: 0;
+  font-family: 'Circular-Pro-Medium', Arial, Helvetica, sans-serif;
+  max-height: 100%;
+  background: linear-gradient(to bottom, #8E49E8 0%, #BBB 100%);
+  color: #777;
+}
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.title-card{
+  font-size: 3.5em;
+  font-family: 'Circular-Pro-Book';
+  color:#fff;
+  position: fixed;
+  left: 100px;
+  right: 0;
+  width: 300px;
+}
+
+.footer{
+  position:fixed;
+  font-family: 'Circular-Pro-Book';
+  top:570px;
+  color: #212121;
+  left:100px;
+  font-size: 13px;
+}
+
+.footer a {
+  text-decoration:underline;
+  color: #212121;
+}
+
+.footer a:hover {
+  text-decoration: none;
+}
+
+/* Container */
+.container {
+  position: fixed;
+  width: 24em;
+  left: 950px;
+  margin-top:50px;
+  transform: translate(-50%,-50%);
+  animation: intro .7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Profile Card */
+.profile {
+  position: relative;
+}
+.profile--open {
+}
+.profile--open .profile__form {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  transform: translateY(-6em);
+  padding-top: 12em;
+}
+.profile--open .profile__fields {
+  opacity: 1;
+  visibility: visible;
+}
+.profile--open .profile__avatar {
+  transform: translate(-50%, -1.5em);
+  border-radius: 50%;
+}
+.profile__form {
+  position: relative;
+  background: white;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  padding: 3em;
+  border-radius: .25em;
+  -webkit-filter: drop-shadow(0 0 2em rgba(0,0,0,0.2));
+  transition:
+    opacity .4s ease-in-out,
+    height .4s ease-in-out,
+    transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    padding .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.profile__fields {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.profile__avatar {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1.25em;
+  overflow: hidden;
+  width: 4.5em;
+  height: 4.5em;
+  display: block;
+  transition: transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  will-change: transform;
+}
+.profile__avatar:focus {
+  outline: 0;
+}
+.profile__footer {
+  padding-top: 1em;
+}
+
+
+/* Form */
+.field {
+  position: relative;
+  margin-bottom: 2em;
+}
+.label {
+  position: absolute;
+  height: 2rem;
+  line-height: 2rem;
+  bottom: 0;
+  color: #999;
+  transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.input {
+  width: 100%;
+  font-size: 100%;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  height: 2rem;
+  line-height: 2rem;
+  border-bottom: 1px solid #eee;
+  color: #777;
+  transition: all .2s ease-in;
+}
+.input:focus {
+  outline: 0;
+  border-color: #ccc;
+}
+
+/* Using required and a faux pattern to see if input has text from http://stackoverflow.com/questions/16952526/detect-if-an-input-has-text-in-it-using-css */
+.input:focus + .label,
+input:valid + .label {
+  transform: translateY(-100%);
+  font-size: 0.75rem;
+  color: #ccc;
+}
+
+/* Button */
+.btn {
+  border: 0;
+  font-size: 0.75rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 1.5rem;
+  color: white;
+  background: #8E49E8;
+  text-transform: uppercase;
+  border-radius: .25rem;
+  letter-spacing: .2em;
+  transition: background .2s;
+}
+.btn:focus {
+  outline: 0;
+}
+.btn:hover,
+.btn:focus {
+  background: #A678E2;
+}
+
+
+/* Intro animation */
+@keyframes intro {
+  from {
+    opacity: 0;
+    top: 0;
+  }
+  to {
+    opacity: 1;
+    top: 50%;
+  }
+}

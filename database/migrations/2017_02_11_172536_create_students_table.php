@@ -19,7 +19,7 @@ class CreateStudentsTable extends Migration
             $table->string('lname');
             $table->string('college');
             $table->string('course');
-            $table->integer('cont_number');
+            $table->string('cont_number', 11);
             $table->timestamps();
         });
     }

@@ -8,9 +8,9 @@ class Book extends Model
 {
     
     //
-   	public function student()
+   	public function owner()
    	{
-   		return $this->belongsTo('App\Student');
+   		return $this->belongsTo('App\Student', 'owner_id', 'id');
    	}
 
 }
